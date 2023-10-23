@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/conda-incubator/{{ name }}/archive/refs/tags/{{ version}}.tar.gz
+  url: https://github.com/conda-incubator/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
   sha256: ec0e26ac671f71069529696c6a4c67be5d1d92d79393091095559289fd11a3da
 
 build:

@@ -32,9 +32,9 @@ test:
   imports:
     - conda_auth
   commands:
-    - pip check
-  requires:
-    - pip
+    - conda auth --help
+    - conda auth login --help
+    - conda auth logout --help
 
 about:
   home: https://github.com/conda-incubator/conda-auth

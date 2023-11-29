@@ -18,7 +18,8 @@ requirements:
   host:
     - python >=3.8,<4.0
     - pip
-    - setuptools-scm
+    - hatchling
+    - hatch-vcs
   run:
     - python >=3.8.1,<4.0.0
     - click

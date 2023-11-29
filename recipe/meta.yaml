@@ -1,13 +1,13 @@
 {% set name = "conda-auth" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/conda-incubator/{{ name }}/archive/refs/tags/{{ version}}.tar.gz
-  sha256: ec0e26ac671f71069529696c6a4c67be5d1d92d79393091095559289fd11a3da
+  url: https://github.com/conda-incubator/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 66de60e079c2b6bfca34f95b09176ea8d082d1e3516c0564dba93a66e9ebb997
 
 build:
   noarch: python
@@ -18,7 +18,8 @@ requirements:
   host:
     - python >=3.8,<4.0
     - pip
-    - setuptools-scm
+    - hatchling
+    - hatch-vcs
   run:
     - python >=3.8.1,<4.0.0
     - click
@@ -31,9 +32,11 @@ test:
   imports:
     - conda_auth
   commands:
-    - pip check
+    - conda auth --help
+    - conda auth login --help
+    - conda auth logout --help
   requires:
-    - pip
+    - keyrings.alt
 
 about:
   home: https://github.com/conda-incubator/conda-auth

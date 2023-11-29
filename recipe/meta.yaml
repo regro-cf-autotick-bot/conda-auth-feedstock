@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda-incubator/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: a510cf0f24068905f1cc620cc11c50928ec207d66b1db42254522f521f7c42e8
+  sha256: 66de60e079c2b6bfca34f95b09176ea8d082d1e3516c0564dba93a66e9ebb997
 
 build:
   noarch: python

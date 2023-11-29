@@ -35,6 +35,8 @@ test:
     - conda auth --help
     - conda auth login --help
     - conda auth logout --help
+  requires:
+    - keyrings.alt
 
 about:
   home: https://github.com/conda-incubator/conda-auth

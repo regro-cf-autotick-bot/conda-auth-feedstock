@@ -12,16 +12,16 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - pip
     - hatchling
     - hatch-vcs
   run:
-    - python >=3.8.1,<4.0.0
+    - python >={{ python_min }},<4.0.0
     - click
     - conda >=23.9.0
     - keyring
@@ -37,6 +37,7 @@ test:
     - conda auth logout --help
   requires:
     - keyrings.alt
+    - python {{ python_min }}
 
 about:
   home: https://github.com/conda-incubator/conda-auth
